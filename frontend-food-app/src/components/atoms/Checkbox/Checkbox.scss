@@ -1,0 +1,28 @@
+input[type='checkbox'] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.checkbox {
+  border: 3px solid #73767f;
+  background: #1f1d2b;
+  border-radius: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  .icon-check {
+    font-size: 20px;
+    transform: translateY(5px);
+    color: #1f1d2b;
+    font-weight: 800;
+  }
+}
+
+.checkbox--active {
+  border-radius: 4px;
+  background-color: #73767f;
+}

@@ -1,0 +1,17 @@
+.box {
+  width: 90%;
+  margin: auto;
+  overflow: auto;
+}
+.table {
+  border-collapse: collapse;
+  border-spacing: 54px 0;
+  width: 100%;
+  min-width: 1000px;
+  tr {
+    cursor: pointer;
+    &:hover {
+      background-color: #393c49;
+    }
+  }
+}

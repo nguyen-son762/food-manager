@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@import '@app/scss/style.scss';
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .btn-primary {
+    border: 1px solid theme('colors.primary');
+    border-radius: 8px;
+    color: theme('colors.white');
+    background: theme('colors.primary');
+    padding: 14px 0;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+  }
+  .btn-primary:hover {
+    color: theme('colors.primary');
+    border: 1px solid theme('colors.primary');
+    background: #1f1d2b;
+  }
+  .btn-primary-outline {
+    border: 1px solid theme('colors.primary');
+    border-radius: 8px;
+    color: theme('colors.primary');
+    background: #1f1d2b;
+    padding: 14px 0;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+  }
+  .btn-primary-outline:hover {
+    color: theme('colors.white');
+    background: theme('colors.primary');
+  }
+
+  .border-solid-gray {
+    border: 1px solid #393c49;
+  }
+  .border-dashed-primary {
+    border: 1px dashed theme('colors.primary');
+  }
+}

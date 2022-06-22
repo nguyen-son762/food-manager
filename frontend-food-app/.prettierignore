@@ -1,0 +1,9 @@
+.cache
+package.json
+package-lock.json
+public
+public/js/landing-page
+resources/js/mdb.min.js
+resources/scss/mdbstyle
+resources/js/landing-page
+resources/scss/landing-page

@@ -1,0 +1,29 @@
+@import '@app/scss/variables.scss';
+.active {
+  color: $primary-color;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    bottom: -14px;
+    width: 70%;
+    height: 3px;
+    background: $primary-color;
+  }
+}
+.menuItem {
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s;
+  &:hover {
+    color: $primary-color;
+    // &::before {
+    //   position: absolute;
+    //   content: "";
+    //   bottom: -14px;
+    //   width: 70%;
+    //   height: 3px;
+    //   background: #ea7c69;
+    // }
+  }
+}
