@@ -179,7 +179,7 @@ const CheckoutScreen = () => {
     dispatch(removeOrder(index));
   };
   return (
-    <section className="bg-dark min-h-[100vh] text-white pt-20 px-14">
+    <section className="bg-dark min-h-[100vh] text-white pt-20 px-14 wrapper">
       {!isPaid ? (
         <div className="bg-dark-second py-8 rounded-xl">
           <div>
@@ -188,7 +188,7 @@ const CheckoutScreen = () => {
               className="flex justify-around flex-wrap px-3"
             >
               <div className="w-[100%] md:w-[50%]">{renderFieldInput()}</div>
-              <div>
+              <div className='max-w-full'>
                 <div className="min-h-[10rem] max-h-[40rem] custom-scrollbar overflow-y-auto rounded-lg">
                   {renderOrders()}
                 </div>
@@ -197,7 +197,7 @@ const CheckoutScreen = () => {
                   <span>{formatCurrency(total)}</span>
                 </div>
                 <button
-                  className="btn-primary w-[13rem] mt-4 flex-center"
+                  className="btn-primary w-[13rem] mt-4 flex-center max-w-full"
                   type="submit"
                 >
                   {isLoading && <LoadingSpinner />}{' '}

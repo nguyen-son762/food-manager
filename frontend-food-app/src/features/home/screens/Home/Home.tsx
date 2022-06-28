@@ -41,7 +41,13 @@ function Home() {
     current: 1,
     total: 1
   });
-
+  function describeFruit<T>(fruit: T): T {
+    return {
+      ...fruit,
+      description: 'A fruit'
+    };
+  }
+  console.log(describeFruit<string>('Hello'));
   //handle pagination
   useEffect(() => {
     if (categories[0] && categories[0].name) {
@@ -121,7 +127,7 @@ function Home() {
     setSearchParams(searchType);
   };
   return (
-    <div className="bg-dark min-h-[100vh] text-white pt-8 px-14">
+    <div className="bg-dark min-h-[100vh] text-white pt-8 px-14 wrapper">
       <div className="flex items-end justify-between flex-wrap">
         <div>
           <p className="text-3xl">Nấm Store</p>
@@ -129,8 +135,8 @@ function Home() {
             <Moment format="ll">{new Date().toISOString()}</Moment>
           </p>
         </div>
-        <form onSubmit={handleSearch}>
-          <div className="bg-[#2D303E] rounded-lg border-solid border-[#393C49] border-[1px] flex items-center p-3">
+        <form onSubmit={handleSearch} className="max-w-full">
+          <div className="bg-[#2D303E] rounded-lg border-solid border-[#393C49] border-[1px] flex items-center p-3 max-w-full">
             <span className="material-icons-outlined text-white mr-2">
               search
             </span>
@@ -138,8 +144,8 @@ function Home() {
               type="text"
               value={keyword}
               onChange={e => setKeyword(e.target.value)}
-              placeholder="Search for food, coffe, etc.."
-              className="placeholder:text-[#ABBBC2] bg-transparent outline-none border-none"
+              placeholder="Tìm kiếm sản phẩm..."
+              className="placeholder:text-[#ABBBC2] bg-transparent outline-none border-none max-w-full"
             />
           </div>
         </form>
@@ -185,3 +191,4 @@ function Home() {
 }
 
 export default Home;
+

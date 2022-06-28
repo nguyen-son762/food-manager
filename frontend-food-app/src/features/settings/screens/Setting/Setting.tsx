@@ -423,7 +423,7 @@ function Setting() {
   };
 
   return (
-    <div className="bg-dark min-h-[100vh] text-white px-8">
+    <div className="bg-dark min-h-[100vh] text-white px-8 wrapper">
       <p className="text-3xl mb-6 pt-6">Settings</p>
       <div className="bg-dark-second px-6 py-9 rounded-lg">
         <div className="flex justify-between items-center mb-8 flex-wrap">

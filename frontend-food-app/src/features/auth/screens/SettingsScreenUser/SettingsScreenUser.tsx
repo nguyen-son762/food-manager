@@ -110,7 +110,7 @@ const SettingsScreen = () => {
     return;
   };
   return (
-    <section className="bg-dark min-h-[100vh] text-white pt-8 px-14">
+    <section className="bg-dark min-h-[100vh] text-white pt-8 px-14 wrapper">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="bg-dark-second rounded-2xl"

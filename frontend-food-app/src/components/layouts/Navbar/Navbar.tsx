@@ -141,9 +141,12 @@ const Navbar = memo(({ children }: NavbarProps) => {
         )}
       </nav>
       <div className="ml-[6.5rem]">{children}</div>
-      {user && user.role === RoleDef.USER && <Chat />}
+      {user && user.role === RoleDef.USER && window.innerWidth > 640 && (
+        <Chat />
+      )}
     </div>
   );
 });
 
 export default React.memo(Navbar);
+

@@ -196,7 +196,7 @@ const Orders = () => {
     toastRef.current.showToast();
   };
   return (
-    <div className="bg-dark min-h-[100vh] text-white pt-8 px-14">
+    <div className="bg-dark min-h-[100vh] text-white pt-8 px-14 wrapper">
       <p className="text-3xl">Orders</p>
       <div className="bg-[#393C49] w-full h-[1px] mt-6"></div>
       {!user && (

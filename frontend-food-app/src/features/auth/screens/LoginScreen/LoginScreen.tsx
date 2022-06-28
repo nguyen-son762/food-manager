@@ -114,7 +114,7 @@ function LoginScreen() {
     return result;
   };
   return (
-    <div className="bg-dark min-h-[100vh] min-w-full flex flex-col justify-center items-center">
+    <div className="bg-dark min-h-[100vh] min-w-full flex flex-col justify-center items-center wrapper">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="bg-dark-second px-6 w-[405px] rounded-lg"
