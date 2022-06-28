@@ -41,13 +41,7 @@ function Home() {
     current: 1,
     total: 1
   });
-  function describeFruit<T>(fruit: T): T {
-    return {
-      ...fruit,
-      description: 'A fruit'
-    };
-  }
-  console.log(describeFruit<string>('Hello'));
+
   //handle pagination
   useEffect(() => {
     if (categories[0] && categories[0].name) {
