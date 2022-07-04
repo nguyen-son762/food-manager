@@ -1,4 +1,4 @@
-import Navbar from '@app/components/layouts/Navbar/Navbar';
+import DefaultLayout from '@app/components/layouts/DefaultLayout/DefaultLayout';
 import { RouteItemDef } from '@app/types/routes.types';
 import Home from '../screens/Home/Home';
 
@@ -7,7 +7,7 @@ const HOME_SCREEN: RouteItemDef = {
   path: '/home',
   component: Home,
   navigationTitle: 'home',
-  layout: Navbar
+  layout: DefaultLayout
 };
 
 export const HOME_ROUTES = [HOME_SCREEN];

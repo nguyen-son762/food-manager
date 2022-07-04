@@ -1,5 +1,5 @@
 import BlankLayout from '@app/components/layouts/BlankLayout/BlackLayout';
-import Navbar from '@app/components/layouts/Navbar/Navbar';
+import DefaultLayout from '@app/components/layouts/DefaultLayout/DefaultLayout';
 import { AuthPathsEnum } from '@app/features/auth/constants/auth.paths';
 import { RouteItemDef } from '@app/types/routes.types';
 import LoginScreen from '../screens/LoginScreen/LoginScreen';
@@ -17,7 +17,7 @@ const SETTING_SCREEN: RouteItemDef = {
   path: AuthPathsEnum.SETTING,
   component: SettingsScreen,
   navigationTitle: 'auth.setttingTitle',
-  layout: Navbar
+  layout: DefaultLayout
 };
 
 export const AUTH_ROUTES = [LOGIN_SCREEN, SETTING_SCREEN];

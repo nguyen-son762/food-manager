@@ -1,4 +1,4 @@
-import Navbar from '@app/components/layouts/Navbar/Navbar';
+import DefaultLayout from '@app/components/layouts/DefaultLayout/DefaultLayout';
 import { RouteItemDef } from '@app/types/routes.types';
 import ChatScreen from '../screens/InboxScreen';
 
@@ -7,7 +7,7 @@ const INBOX_SCREEN: RouteItemDef = {
   path: '/inbox',
   component: ChatScreen,
   navigationTitle: 'chat',
-  layout: Navbar
+  layout: DefaultLayout
 };
 
 export const INBOX_ROUTES = [INBOX_SCREEN];

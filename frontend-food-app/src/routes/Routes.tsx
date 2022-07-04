@@ -7,9 +7,8 @@ import { ComponentType, ElementType, memo, useEffect, useMemo } from 'react';
 import { Routes as Switch, Route, Navigate } from 'react-router-dom';
 import { PRIVATE_LIST, PUBLIC_LIST } from './routes.config';
 
-const DefaultLayout = BlankLayout;
 function Routes() {
-  const user = useAppSelector(state=>state.auth.user)
+  const user = useAppSelector(state => state.auth.user);
   const dispatch = useAppDispatch();
   useEffect(() => {
     const { accessToken } = getTokens();
@@ -20,9 +19,9 @@ function Routes() {
       autoLoginPromise();
     }
   }, []);
-  const isAuthenticated  = useMemo(() => {
-    return user?._id
-  }, [user])
+  const isAuthenticated = useMemo(() => {
+    return user?._id;
+  }, [user]);
   const routeWrapper = (
     { id, path, layout, component }: RouteItemDef,
     { isProtectedRoute }: RouteWrapperConfigDef | undefined = {}
@@ -37,6 +36,7 @@ function Routes() {
       )}
     />
   );
+
   const renderRoute = (
     Component: ComponentType,
     isProtectedRoute: RouteWrapperConfigDef,
@@ -45,7 +45,7 @@ function Routes() {
     if (isProtectedRoute && !isAuthenticated) {
       return <Navigate replace to="/home" />;
     }
-    const Layout = layout ?? DefaultLayout;
+    const Layout = layout ?? BlankLayout;
     return (
       <Layout>
         <Component />
@@ -64,9 +64,9 @@ function Routes() {
         <Route
           path="*"
           element={() => (
-            <DefaultLayout>
+            <BlankLayout>
               <NotFound />
-            </DefaultLayout>
+            </BlankLayout>
           )}
         />
       </Switch>
